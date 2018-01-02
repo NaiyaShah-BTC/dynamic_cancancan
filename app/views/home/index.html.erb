@@ -1,0 +1,16 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<%= form_tag('/') do %>
+  <div>Student</div>
+  <%= check_box_tag(:exam_s) %>
+  <%= label_tag(:exam_s, "Can manage exam") %>
+  <%= check_box_tag(:result_s) %>
+  <%= label_tag(:result_s, "Can manage result") %>
+  <div>Teacher</div>
+  <%= check_box_tag(:exam) %>
+  <%= label_tag(:exam, "Can manage exam") %>
+  <%= check_box_tag(:result) %>
+  <%= label_tag(:result, "Can manage result") %>
+  <div><%= submit_tag 'Save' %></div>
+<% end %>

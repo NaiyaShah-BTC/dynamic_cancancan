@@ -1,0 +1,20 @@
+<% if @exams.present? %>
+  <table>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Content</th>
+    </tr>
+
+    <% @exams.each_with_index do |exam, index| %>
+    <tr>
+      <td><%= index+1 %></td>
+      <td><%= exam.name %></td>
+      <td><%= exam.content %></td>
+    </tr>
+    <% end %>
+
+  </table>
+<% else %>
+  <h6 class="no-record">No Records found</h6>
+<% end %>
